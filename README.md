@@ -1,6 +1,10 @@
-# Vyntara Institute — College Website + ERP System
+# 🎓 Vyntara Institute — College Website + ERP System
 
 A complete, responsive **College Website** integrated with an **Institute ERP System** built using pure HTML, CSS, and JavaScript (no backend required — uses LocalStorage).
+
+## 🌐 Live Demo
+
+👉 **[https://comforting-chebakia-32580c.netlify.app](https://comforting-chebakia-32580c.netlify.app)**
 
 ## 🚀 How to Run
 
@@ -73,18 +77,22 @@ college-erp/
 
 ## 🌐 Deployment
 
-**Deploy to Netlify (fastest):**
+**This project is live at:** [https://comforting-chebakia-32580c.netlify.app](https://comforting-chebakia-32580c.netlify.app)
+
+**Deploy your own copy:**
+
+**Netlify (fastest):**
 1. Go to [netlify.com/drop](https://app.netlify.com/drop)
 2. Drag & drop the `college-erp` folder.
 3. Get your live URL instantly!
 
-**Deploy to Vercel:**
+**Vercel:**
 1. Push the folder to GitHub.
 2. Import repo on [vercel.com](https://vercel.com).
 3. Deploy with one click.
 
-**Deploy to GitHub Pages:**
-1. Create a new GitHub repo named `college-erp`.
+**GitHub Pages:**
+1. Create a new GitHub repo.
 2. Push the folder contents.
 3. Settings → Pages → Deploy from main branch.
 
@@ -92,6 +100,12 @@ college-erp/
 - All data is stored in your browser's LocalStorage — clear browser data to reset.
 - Sample data is auto-loaded on first visit.
 - For a production system, replace LocalStorage with a real backend (Node.js + MongoDB, Django, PHP+MySQL, etc.).
+
+## 👩‍💻 Developer
+
+**Pooja Kuver**
+- 🔗 GitHub: [@poojakuver535](https://github.com/poojakuver535)
+- 🌐 Live Project: [comforting-chebakia-32580c.netlify.app](https://comforting-chebakia-32580c.netlify.app)
 
 ---
 Built with ❤️ as a learning project.
