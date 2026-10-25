@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Vyntara ERP</title><link rel="stylesheet" href="../css/erp.css"></head>
+<body>
+<aside class="sidebar">
+  <h2>Vyntara <span>ERP</span></h2>
+  <ul>
+    <li><a href="dashboard.html" class="active">📊 <span>Dashboard</span></a></li>
+    <li><a href="students.html">👨‍🎓 <span>Students</span></a></li>
+    <li><a href="faculty.html">👩‍🏫 <span>Faculty</span></a></li>
+    <li><a href="courses.html">📚 <span>Courses</span></a></li>
+    <li><a href="attendance.html">✅ <span>Attendance</span></a></li>
+    <li><a href="notices.html">📢 <span>Notices</span></a></li>
+    <li><a href="#" onclick="logout()">🚪 <span>Logout</span></a></li>
+  </ul>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <h1>Dashboard</h1>
+    <div class="user-info">
+      <div class="avatar" id="user-avatar">A</div>
+      <div><strong id="user-name">ADMIN</strong><br><small>Administrator</small></div>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div><h3 id="stat-students">0</h3><p>Total Students</p></div><div class="ico">👨‍🎓</div></div>
+    <div class="stat-card"><div><h3 id="stat-faculty">0</h3><p>Faculty Members</p></div><div class="ico">👩‍🏫</div></div>
+    <div class="stat-card"><div><h3 id="stat-courses">0</h3><p>Active Courses</p></div><div class="ico">📚</div></div>
+    <div class="stat-card"><div><h3 id="stat-notices">0</h3><p>Notices Posted</p></div><div class="ico">📢</div></div>
+  </div>
+
+  <div class="panel">
+    <h2>Quick Actions</h2>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="students.html" class="btn-primary" style="text-decoration:none">➕ Add Student</a>
+      <a href="faculty.html" class="btn-primary" style="text-decoration:none">➕ Add Faculty</a>
+      <a href="courses.html" class="btn-primary" style="text-decoration:none">➕ Add Course</a>
+      <a href="notices.html" class="btn-primary" style="text-decoration:none">📢 Post Notice</a>
+      <a href="attendance.html" class="btn-primary" style="text-decoration:none">✅ Mark Attendance</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Recent Notices</h2>
+    <div id="recent-notices"></div>
+  </div>
+</main>
+<script src="../js/erp.js"></script>
+<script>if(!requireAuth()){} </script>
+</body></html>

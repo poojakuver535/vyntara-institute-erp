@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty - Vyntara ERP</title><link rel="stylesheet" href="../css/erp.css"></head>
+<body>
+<aside class="sidebar">
+  <h2>Vyntara <span>ERP</span></h2>
+  <ul>
+    <li><a href="dashboard.html">📊 <span>Dashboard</span></a></li>
+    <li><a href="students.html">👨‍🎓 <span>Students</span></a></li>
+    <li><a href="faculty.html" class="active">👩‍🏫 <span>Faculty</span></a></li>
+    <li><a href="courses.html">📚 <span>Courses</span></a></li>
+    <li><a href="attendance.html">✅ <span>Attendance</span></a></li>
+    <li><a href="notices.html">📢 <span>Notices</span></a></li>
+    <li><a href="#" onclick="logout()">🚪 <span>Logout</span></a></li>
+  </ul>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <h1>Faculty Management</h1>
+    <div class="user-info"><div class="avatar">A</div><strong id="user-name">ADMIN</strong><button class="logout-btn" onclick="logout()">Logout</button></div>
+  </div>
+  <div class="panel">
+    <h2>Add / Edit Faculty</h2>
+    <form id="faculty-form" onsubmit="return addFaculty(event)">
+      <input type="hidden" id="f-edit-id">
+      <div class="form-row">
+        <div class="form-group"><label>Name *</label><input id="f-name" required></div>
+        <div class="form-group"><label>Department *</label>
+          <select id="f-dept" required>
+            <option value="">--</option>
+            <option>Computer Science</option><option>Electronics</option><option>Mechanical</option>
+            <option>Civil</option><option>Management</option><option>Sciences</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Designation *</label>
+          <select id="f-desig" required>
+            <option value="">--</option>
+            <option>Professor</option><option>Associate Professor</option>
+            <option>Assistant Professor</option><option>HOD</option><option>Lecturer</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Phone</label><input id="f-phone"></div>
+      </div>
+      <div class="form-group"><label>Email *</label><input type="email" id="f-email" required></div>
+      <button class="btn-primary" type="submit">Save Faculty</button>
+    </form>
+  </div>
+  <div class="panel">
+    <h2>All Faculty</h2>
+    <table id="faculty-table">
+      <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Designation</th><th>Email</th><th>Phone</th><th>Actions</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+<script src="../js/erp.js"></script>
+<script>if(!requireAuth()){} </script>
+</body></html>

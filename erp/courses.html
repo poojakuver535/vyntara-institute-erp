@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses - Vyntara ERP</title><link rel="stylesheet" href="../css/erp.css"></head>
+<body>
+<aside class="sidebar">
+  <h2>Vyntara <span>ERP</span></h2>
+  <ul>
+    <li><a href="dashboard.html">📊 <span>Dashboard</span></a></li>
+    <li><a href="students.html">👨‍🎓 <span>Students</span></a></li>
+    <li><a href="faculty.html">👩‍🏫 <span>Faculty</span></a></li>
+    <li><a href="courses.html" class="active">📚 <span>Courses</span></a></li>
+    <li><a href="attendance.html">✅ <span>Attendance</span></a></li>
+    <li><a href="notices.html">📢 <span>Notices</span></a></li>
+    <li><a href="#" onclick="logout()">🚪 <span>Logout</span></a></li>
+  </ul>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <h1>Course Management</h1>
+    <div class="user-info"><div class="avatar">A</div><strong id="user-name">ADMIN</strong><button class="logout-btn" onclick="logout()">Logout</button></div>
+  </div>
+  <div class="panel">
+    <h2>Add New Course</h2>
+    <form id="course-form" onsubmit="return addCourse(event)">
+      <div class="form-row">
+        <div class="form-group"><label>Course Code *</label><input id="c-code" required placeholder="e.g. CS301"></div>
+        <div class="form-group"><label>Course Name *</label><input id="c-name" required></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Department *</label>
+          <select id="c-dept" required>
+            <option value="">--</option>
+            <option>Computer Science</option><option>Electronics</option><option>Mechanical</option>
+            <option>Civil</option><option>Management</option><option>Sciences</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Credits *</label><input type="number" id="c-credits" min="1" max="6" required></div>
+      </div>
+      <div class="form-group"><label>Assigned Faculty *</label><input id="c-faculty" required></div>
+      <button class="btn-primary" type="submit">Add Course</button>
+    </form>
+  </div>
+  <div class="panel">
+    <h2>All Courses</h2>
+    <table id="courses-table">
+      <thead><tr><th>Code</th><th>Course Name</th><th>Department</th><th>Credits</th><th>Faculty</th><th>Actions</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+<script src="../js/erp.js"></script>
+<script>if(!requireAuth()){} </script>
+</body></html>

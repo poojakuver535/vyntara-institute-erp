@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP Login - Vyntara Institute</title><link rel="stylesheet" href="../css/erp.css"></head>
+<body class="login-page">
+<div class="login-box">
+  <h1>🎓 Vyntara ERP</h1>
+  <p>Institute Management System</p>
+  <form onsubmit="return login(event)">
+    <div class="form-group"><label>Username</label><input type="text" id="username" required></div>
+    <div class="form-group"><label>Password</label><input type="password" id="password" required></div>
+    <button class="btn-submit" type="submit">Login</button>
+  </form>
+  <div class="hint">
+    <strong>Demo Credentials:</strong><br>
+    Admin → admin / admin123<br>
+    Faculty → faculty / faculty123
+  </div>
+  <div class="back-home"><a href="../index.html">← Back to Home</a></div>
+</div>
+<script src="../js/erp.js"></script>
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance - Vyntara ERP</title><link rel="stylesheet" href="../css/erp.css"></head>
+<body>
+<aside class="sidebar">
+  <h2>Vyntara <span>ERP</span></h2>
+  <ul>
+    <li><a href="dashboard.html">📊 <span>Dashboard</span></a></li>
+    <li><a href="students.html">👨‍🎓 <span>Students</span></a></li>
+    <li><a href="faculty.html">👩‍🏫 <span>Faculty</span></a></li>
+    <li><a href="courses.html">📚 <span>Courses</span></a></li>
+    <li><a href="attendance.html" class="active">✅ <span>Attendance</span></a></li>
+    <li><a href="notices.html">📢 <span>Notices</span></a></li>
+    <li><a href="#" onclick="logout()">🚪 <span>Logout</span></a></li>
+  </ul>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <h1>Mark Attendance</h1>
+    <div class="user-info"><div class="avatar">A</div><strong id="user-name">ADMIN</strong><button class="logout-btn" onclick="logout()">Logout</button></div>
+  </div>
+  <div class="panel">
+    <h2>Attendance for Today</h2>
+    <div class="form-row">
+      <div class="form-group"><label>Date</label><input type="date" id="att-date"></div>
+      <div class="form-group"><label>Course</label>
+        <select id="att-course">
+          <option>Data Structures (CS301)</option>
+          <option>Operating Systems (CS302)</option>
+          <option>Digital Electronics (EC301)</option>
+          <option>Thermodynamics (ME301)</option>
+        </select>
+      </div>
+    </div>
+    <div id="attendance-list" class="attendance-list"></div>
+    <br>
+    <button class="btn-primary" onclick="saveAttendance()">💾 Save Attendance</button>
+  </div>
+</main>
+<script src="../js/erp.js"></script>
+<script>if(!requireAuth()){} </script>
+</body></html>
